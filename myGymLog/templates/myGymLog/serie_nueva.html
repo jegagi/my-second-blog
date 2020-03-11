@@ -1,0 +1,66 @@
+{% extends 'myGymLog/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/crear_entrenamiento.css' %}">
+
+<main>
+
+  <div class="main col-10">
+
+    <article class="tabla col-10" >
+        <header class="center"><h2>Nueva Serie, {{nombre}}</h2></header>
+        <section class="tabla col-12">
+                    <table class="table-borderless table">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Repeticiones</th>
+                                <th>Peso</th>
+                                <th>RIR</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
+
+                        <form  method="post">
+                          {% csrf_token %}
+                          <tbody>
+                            <tr>
+                                <td>
+                                    <Label><input class="r border form-control" type="number" name="repeticiones" value="1" min="1"/></Label>
+                                </td>
+                                <td>
+                                    <Label><input class="peso border form-control" type="number" name="peso" step="2.5" min="0"/></Label>
+                                </td>
+                                <td>
+                                    <Label> <input class="r border form-control" type="number" name="rir" value="1" min="0"/></Label>
+                                </td>
+                                <td>
+                                    <Label><textarea class="border form-control observaciones" type="text" name="observaciones"></textarea></Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="boton">
+                                      <button type=submit class="btn btn-outline-secondary btn-sm"> Añadir Serie</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                          </tbody>
+                        </form>
+                      </table>
+
+            </section>
+
+    </div>
+    <div class="anuncio col-2">
+
+            <a href="">
+                <p>Anuncio  </p>
+                <img src="" alt="">
+            </a>
+
+    </div>
+
+</main>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'myGymLog/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/crear_entrenamiento.css' %}">
+
+<main>
+
+<div class="main col-10">
+    <article class="tabla col-10" >
+        <header class="center"><h2>Entrenamiento {{tipo}} del {{fecha}}</h2></header>
+        <section class="border">
+
+            <table class="table-borderless table">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Ejercicio</th>
+                        <th>Series</th>
+                        <th>Tonelaje</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for i, j, k in lista_ej %}
+                  <tr>
+                    <td>{{i}}</td>
+                    <td>{{j}}</td>
+                    <td>{{k}}</td>
+                  </tr>
+                  {% endfor %}
+                  <form method="POST" action="{% url 'ejercicios' entr_pk=entr_pk %}">
+                  <tr>
+
+                    <td>
+
+                        {% csrf_token %}
+
+
+                          <select class="custom-select" type="text" name="nombre" required>
+                              <option value="">Selecciona un ejercicio</option>
+                              {% for ejN in lista %}
+                              <option value="{{ejN.nombre}}">{{ejN.nombre}}</option>
+                              {% endfor %}
+                            </select>
+
+                    </td>
+                    <td colspan="2">
+
+                            <button class="btn btn-outline-secondary btn-sm" (click)=anyadirEjercicio()>Añadir ejercicio</button>
+                    </td>
+                  </tr>
+                  </form>
+              </tbody>
+
+
+          </table>
+
+    </section>
+  </article>
+</div>
+<div class="anuncio col-2">
+
+        <a href="">
+            <p>Anuncio  </p>
+            <img src="" alt="">
+        </a>
+
+</div>
+</main>
+{% endblock %}

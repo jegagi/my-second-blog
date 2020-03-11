@@ -1,0 +1,78 @@
+{% extends 'myGymLog/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/mis_entrenamientos.css' %}">
+
+<main>
+        <div class="main col-10">
+
+                <h2 class="titulo">Mis Entrenamientos</h2>
+
+                <form method="POST">
+                  {% csrf_token %}
+                        <div class="fecha">
+                                <h4>TIPO:</h4>
+
+                                <select class="custom-select" type="text" name="tipo">
+                                    {% for tip in tipos %}
+                                    <option value="{{tip}}">{{tip}}</option>
+                                    {% endfor %}
+                                </select>
+
+
+
+                                <button type="submit" class="btn btn-outline-primary">Filtrar</button>
+
+
+                        </div>
+                </form>
+                    {% if tipo_seleccionado == null %}
+                    <div class="etiquetas"><span class="badge badge-primary">Todos</span></div>
+                    {% else %}
+                    <div class="etiquetas"><span class="badge badge-primary">{{tipo_seleccionado}}</span></div>
+                    {% endif %}
+                    <article>
+                            <section class="border">
+
+                                        <table class="table-borderless table">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Fecha</th>
+                                                    <th colspan="2">Tipo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for entr in entrenamientos %}
+                                                <tr *ngFor="let entr of mostrarEntrenamientos">
+                                                    <td>{{entr.fecha}}</td>
+                                                    <td>{{entr.tipo}}</td>
+                                                    <td>
+                                                        <span class="anyadir">
+                                                                <a [routerLink]="['/mostrarEntrenamiento/' + entr.getFecha()]" class="ver"><fa-icon [icon]="['fas', 'eye']" class="iconOjo"></fa-icon></a>
+                                                        </span>
+                                                    </td>
+
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+
+                                        </table>
+
+                                </section>
+                    </article>
+
+
+
+    </div>
+    <div class="anuncio col-2">
+
+            <a href="">
+                <p>Anuncio</p>
+                <img src="" alt="">
+            </a>
+
+    </div>
+
+</main>
+{% endblock %}

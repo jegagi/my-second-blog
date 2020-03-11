@@ -1,0 +1,224 @@
+.btn-outline-primary{
+
+    color:#0BB549;
+    border: 1px solid #0BB549;
+    padding-left: 10px;
+}
+.btn-outline-primary:hover{
+
+    color:white;
+    background-color: #0BB549;
+
+}
+.login{
+  padding: 20px;
+}
+.btn-outline-secondary{
+
+    color:#F2AE27;
+    border: 1px solid #F2AE27;
+    padding-left: 10px;
+}
+.btn-outline-secondary:hover{
+
+    color:white;
+    background-color: #F2AE27;
+
+}
+
+i.done{
+    color: #0BB549;
+   padding-top:5px;
+   padding-left: 5px;
+   padding-right: 5px;
+
+}
+button:hover i.done{
+    color: white;
+}
+
+
+.col-1{
+    width: 8%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-2{
+    width: 17%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-3{
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-4{
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-5{
+    width: 42%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-6{
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-7{
+    width: 58%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-8{
+    width: 67%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-9{
+    width: 75%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-10{
+    width: 83%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-11{
+    width: 92%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-12{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.izq{
+    float: left;
+}
+*{
+    font-family: Comic Sans MS;
+}
+aside{
+    background-color:#e8e8e8;
+}
+
+.principal{
+    width: 100%;
+    float: left;
+}
+
+
+.col-container {
+    display: flex;
+    width: 100%;
+}
+
+div.huecoArriba{
+    padding-top: 150px;
+    display: flex;
+}
+
+div.huecoAbajo{
+    border-bottom:1px solid black ;
+    padding-top: 50px;
+    display: flex;
+}
+
+header{
+    width: 90%;
+    float: left;
+    display: flex;
+    background-color: #FF913D;
+
+}
+
+header div#logo{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header div#logo a img{
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: fit-content;
+}
+
+header nav ul li{
+    list-style: none;
+    font-size: 22px;
+    padding-right: 40px;
+    padding-left: 20px;
+    border-right: 1px solid black;
+}
+
+header nav ul li.ultimo{
+    border-right: none;
+}
+
+header a:hover{
+   text-decoration: underline;
+   color: black;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+}
+
+
+aside ul{
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    flex-flow: column;
+    justify-content: space-around;
+    height: 450px;
+}
+aside ul{
+    flex-basis: 100%;
+}
+aside li{
+    list-style: none;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid black;
+}
+aside a:hover{
+    text-decoration: underline;
+ }
+aside a{
+     color: black;
+     text-decoration: none;
+ }
+aside li.ultimo{
+    border-bottom: none;
+}
+footer{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+footer a:hover{
+    text-decoration: underline;
+ }
+
+ footer a{
+     color:#FF913D;
+     text-decoration: bold;
+ }

@@ -1,0 +1,93 @@
+div.fecha_tipo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-left:100px;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.fecha{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+div.tipo{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.boton{
+  text-align: center;
+  align-self: center;
+}
+button {
+  height: 38px;
+  width: fit-content;
+  align-self: baseline;
+}
+div.anuncio{
+    border: 1px solid black;
+}
+.ok{
+  margin-top: 10px;
+}
+
+.observaciones{
+  width: 300px;
+}
+
+h4{
+    color:#2341AD;
+}
+article header{
+    width: fit-content;
+    text-decoration: underline;
+    text-align: center;
+    color: #FF913D;
+    background-color:white;
+    align-self: center;
+}
+.table{
+  text-align: center;
+}
+input.peso{
+    width: 85px;
+}
+input.r{
+    width: 60px;
+}
+input{
+    font-size: 1rem;
+    font-weight: lighter;
+    border: 0px;
+}
+
+article{
+    margin: 10px;
+    background-color: white;
+    clear: both;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+section{
+    margin: 10px;
+    width: fit-content;
+    align-self: center;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row;
+}

@@ -1,0 +1,72 @@
+{% extends 'myGymLog/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/crear_entrenamiento.css' %}">
+
+<main>
+
+  <div class="main col-10">
+
+    <article class="tabla col-10" >
+        <header class="center"><h2>{{nombre}}</h2></header>
+        <section class="border">
+
+
+            <table class="table-borderless table">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Repeticiones</th>
+                        <th>Peso</th>
+                        <th>RIR</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                  {% for i in listar_series %}
+                    <tr>
+                      <td> {{i.repeticiones}} </td>
+                      <td> {{i.peso}} </td>
+                      <td> {{i.rir}} </td>
+                      {% if  i.observaciones %}
+                      <td><button class="btn btn-outline-secondary btn-sm">Mostrar</button></td>
+                      {% endif %}
+                    </tr>
+                  {% endfor %}
+                  <tr>
+                    <td>
+
+                    </td>
+                    <td colspan="2">
+
+                          <button class="btn btn-outline-secondary btn-sm" ><a href="{% url 'serie_nueva' entr_pk=entr_pk  ej_pk=ej_pk %}">Añadir Serie</a> </button>
+                    </td>
+                  </tr>
+
+              </tbody>
+
+
+          </table>
+
+
+
+
+    </section>
+
+    <section>
+      <button class="btn btn-outline-primary btn-sm" ><a href="{% url 'ejercicios' entr_pk=entr_pk %}">Completar Ejercicio</a> </button>
+    </section>
+
+    </div>
+    <div class="anuncio col-2">
+
+            <a href="">
+                <p>Anuncio  </p>
+                <img src="" alt="">
+            </a>
+
+    </div>
+
+</main>
+{% endblock %}

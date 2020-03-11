@@ -1,0 +1,55 @@
+{% extends 'myGymLog/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/crear_entrenamiento.css' %}">
+
+<main>
+
+  <div class="main col-10">
+
+
+
+
+    <form method="POST" action="{% url 'crear_entrenamiento' %}">
+      {% csrf_token %}
+          <div class="fecha_tipo col-10">
+
+                  <div class="fecha col-6">
+                    <h4>FECHA: </h4>
+                    {{form.fecha}}
+                  </div>
+
+                  <div class="tipo col-6">
+                    <h4>TIPO:
+                        <label>
+                             <select class="custom-select" type="text" name="tipo" required>
+                                <option value="">Selecciona un tipo</option>
+                                {% for j in tipos %}
+                                <option value="{{j}}">{{j}}</option>
+                                {% endfor %}
+                              </select>
+
+
+                        </label>
+                    </h4>
+
+                  </div>
+          <button type="submit" class="ok btn btn-sm btn-outline-primary">Guardar</button>
+
+                    </div>
+    </form>
+    
+
+    </div>
+    <div class="anuncio col-2">
+
+            <a href="">
+                <p>Anuncio  </p>
+                <img src="" alt="">
+            </a>
+
+    </div>
+
+</main>
+{% endblock %}

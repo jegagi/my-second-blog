@@ -1,0 +1,80 @@
+div.anuncio{
+    border: 1px solid black;
+}
+div.fecha{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.form{
+  margin-right: 20%;
+  
+}
+
+h4{
+    width: 100%;
+    color:#2341AD;
+}
+.titulo{
+    width: 100%;
+    text-decoration: underline;
+    text-align: center;
+    color: #FF913D;
+    padding-bottom: 25px;
+}
+main{
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+}
+.btn{
+  align-self: center;
+}
+.principal{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.linea{
+border-left: 1px solid black;
+width: 10px;
+}
+.completar {
+    text-align: center;
+    align-self: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+form{
+  padding-top: 30px;
+  align-content: center;
+}
+
+.input-group-text{
+   color: #2341AD;
+   padding-right: 10px;
+   align-self: center;
+}
+.form{
+  padding-top: 20px;
+
+  align-self: center;
+}
+.input-group{
+  align-self: center
+  align-content: center;
+}
+button{
+    background-color: white;
+
+
+}
+
+span{
+    padding-bottom: 10px;
+}

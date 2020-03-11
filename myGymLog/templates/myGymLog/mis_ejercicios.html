@@ -1,0 +1,67 @@
+{% extends 'myGymLog/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/mis_ejercicios.css' %}">
+<main>
+
+
+        <div class="main col-10">
+
+                <h2>Mis Ejercicios</h2>
+
+                    <article>
+                            <section class="border">
+
+                                        <table class="table-borderless table">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th>Ejercicio</th>
+                                                    <th>Músculo Principal</th>
+                                                    <th colspan="3">Músculos Secundarios</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                              {% for ejercicio in ejercicios %}
+
+                                                <tr>
+                                                    <td>{{ejercicio.nombre}}</td>
+                                                    <td>{{ejercicio.musculoPrincipal}}</td>
+                                                    <td>{{ejercicio.musculoSecundario1}}</td>
+                                                    <td>{{ejercicio.musculoSecundario2}}</td>
+                                                    <td><a class="btn btn-default" href="{% url 'editar_ejercicio' pk=ejercicio.pk %}"><i class="fa fa-edit"></i></a></td>
+                                                </tr>
+
+                                              {% endfor %}
+                                            </tbody>
+
+
+
+                                        </table>
+                                </section>
+                    </article>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="anuncio col-2">
+
+            <a href="">
+                <p>Anuncio</p>
+                <img src="" alt="">
+            </a>
+
+    </div>
+
+</main>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'myGymLog/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/anyadir_nuevo_ejercicio.css' %}">
+
+<main>
+    <div class="main col-10">
+        <h2>Añadir ejercicio </h2>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="completar col-10">
+
+              <div class="boton">
+                  <div class="botonDentro">
+                    <div class="input-group mb-3 col-12">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Nombre</span>
+                        </div>
+                        <input type="text"  name="nombre" class="form-control">
+
+                    </div>
+                    <div class="input-group mb-3 col-12">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Músculo Principal</span>
+                        </div>
+                        <input type="text" name="musculoPrincipal" class="form-control">
+
+                    </div>
+                    <div class="input-group mb-3 col-12">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Músculos Secundarios 1</span>
+                        </div>
+                        <input  type="text"name="musculoSecundario1" class="form-control">
+                    </div>
+                    <div class="input-group mb-3 col-12">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Músculos Secundarios 2</span>
+                        </div>
+                        <input type="text" name="musculoSecundario2" class="form-control">
+                    </div>
+                    <div class="input-group mb-3 col-12">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Músculos Secundarios 3</span>
+                        </div>
+                        <input type="text"  name="musculoSecundario3" class="form-control">
+                    </div>
+
+
+                  </div>
+              </div>
+          </div>
+
+
+                <div class="completar col-10">
+
+                    <div class="boton">
+                        <div class="botonDentro">
+                          <button class="btn btn-outline-primary" type="submit">Completar ejercicio
+
+                          </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="anuncio col-2">
+
+            <a href="">
+                <p>Anuncio  </p>
+                <img src="" alt="">
+            </a>
+
+    </div>
+
+</main>
+{% endblock %}
