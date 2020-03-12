@@ -40,13 +40,13 @@ def nuevo_ejercicio(request):
 def editar_ejercicio(request, pk):
     ejercicio = get_object_or_404(EjercicioT, pk=pk)
     if request.method == "POST":
-        form = EjercicioForm(request.POST, instance=ejercicio)
+        form = EjercicioTForm(request.POST, instance=ejercicio)
         if form.is_valid():
             ejercicio = form.save(commit=True)
             ejercicio.save()
             return redirect('main')
     else:
-        form = EjercicioForm(instance=ejercicio)
+        form = EjercicioTForm(instance=ejercicio)
     return render(request, 'myGymLog/anyadir_nuevo_ejercicio.html',
                   {'form': form})
 
