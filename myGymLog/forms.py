@@ -4,7 +4,7 @@ from .models import EjercicioT, Entrenamiento, Serie
 from django.contrib.auth.models import User
 
 
-class EjercicioForm(forms.ModelForm):
+class EjercicioTForm(forms.ModelForm):
 
     class Meta:
         model = EjercicioT

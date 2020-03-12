@@ -3,7 +3,7 @@ from .models import EjercicioT
 from .models import Entrenamiento
 from .models import Serie
 
-from .forms import EjercicioForm
+from .forms import EjercicioTForm
 from .forms import EntrenamientoForm
 from .forms import SerieForm
 from .forms import TipoForm
@@ -26,13 +26,13 @@ def main(request):
 
 def nuevo_ejercicio(request):
     if request.method == "POST":
-        form = EjercicioForm(request.POST)
+        form = EjercicioTForm(request.POST)
         if form.is_valid():
             ejercicio = form.save(commit=True)
             ejercicio.save()
             return redirect('main')
     else:
-        form = EjercicioForm()
+        form = EjercicioTForm()
     return render(request, 'myGymLog/anyadir_nuevo_ejercicio.html',
                   {'form': form})
 
